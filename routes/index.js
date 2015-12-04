@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var db = require('monk')(process.env.MONGO_URI || 'localhost/redditDB')
+var db = require('monk')(process.env.MONGOLAB_URI || 'localhost/redditDB')
 var Reddit = db.get('posts');
 
 

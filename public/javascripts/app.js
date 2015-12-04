@@ -54,7 +54,7 @@ app.controller('reddit', function($scope, $http){
 
   $scope.hideShow();
 
-  $scope.submit = function(thisComment, isValid) {
+  $scope.submit = function(thisComment) {
       thisComment.post.comments.push(this.elem);
       $http.post('/reddit/' + this.post._id, this.post.comments);
       this.elem = {};
